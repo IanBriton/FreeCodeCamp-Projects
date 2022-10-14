@@ -1,0 +1,94 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(240, 246, 255);
+}
+
+.main-section-container {
+  width: 80%;
+  margin: 1.5em auto;
+}
+.main-section-container .div-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.main-section-container .div-container h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 0.15em;
+  margin: 1em auto 0.5em auto;
+}
+.main-section-container .div-container .nav-links li {
+  display: inline;
+  margin: 1em;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+}
+.main-section-container .div-container .nav-links a {
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(16, 227, 210);
+  font-size: 1.5em;
+  transition: transform;
+  transition: all linear 0.3s;
+}
+.main-section-container .div-container .nav-links a:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+  color: black;
+  height: 1em;
+  width: 3em;
+  border-radius: 10px;
+}
+.main-section-container .image-holder img {
+  height: 32em;
+  width: 75em;
+  margin: 2em;
+  border: 5px solid rgb(16, 227, 210);
+  border-radius: 10px;
+}
+.main-section-container .btn-elements {
+  height: 3em;
+  width: 12em;
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.main-section-container .btn-elements .btn {
+  color: black;
+  height: 2em;
+  width: 4em;
+  background: rgb(16, 227, 210);
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2em;
+  transition: all linear 0.3s;
+}
+.main-section-container .btn-elements .btn:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.show-btn {
+  visibility: visible;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,98 @@
+@import "./resets";
+@import "./variables";
+
+@mixin flexCenter($direction) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+body {
+  background: $background-color;
+}
+
+.main-section-container {
+  width: 80%;
+  margin: 1.5em auto;
+  //   background: $primary-color;
+
+  .div-container {
+    @include flexCenter(column);
+
+    h1 {
+      text-align: center;
+      text-transform: uppercase;
+      font-family: $font-family;
+      letter-spacing: $letter-spacing;
+      margin: 1em auto 0.5em auto;
+    }
+
+    .nav-links li {
+      display: inline;
+      margin: 1em;
+      text-decoration: none;
+      border: none;
+      border-radius: 10px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-family: $font-family;
+      color: $secondary-color;
+      font-size: 1.5em;
+      transition: transform;
+      transition: all linear 0.3s;
+    }
+    .nav-links a:hover {
+      cursor: pointer;
+      transform: scale(1.5);
+      color: black;
+      height: 1em;
+      width: 3em;
+      border-radius: 10px;
+    }
+  }
+
+  p {
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+  }
+
+  .image-holder img {
+    height: 32em;
+    width: 75em;
+    margin: 2em;
+    border: 5px solid $secondary-color;
+    border-radius: 10px;
+  }
+  .btn-elements {
+    height: 3em;
+    width: 12em;
+    // background: red;
+    margin: 2em auto;
+    @include flexCenter(row);
+  }
+  .btn-elements .btn {
+    color: black;
+    height: 2em;
+    width: 4em;
+    background: $secondary-color;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    transition: all linear 0.3s;
+  }
+  .btn-elements .btn:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+}
+.hidden {
+  visibility: hidden;
+}
+.show-btn {
+  visibility: visible;
+}

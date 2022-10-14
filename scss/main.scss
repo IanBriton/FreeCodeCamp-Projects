@@ -1,0 +1,139 @@
+@import "./resets";
+@import "./variables";
+
+@mixin flexCenter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main {
+  width: 40vw;
+  margin: 10em auto;
+  background: $primary-color;
+  max-height: 100em;
+  border: none;
+  border-radius: 15px;
+
+  .success-error__para {
+    height: 2em;
+    width: 27%;
+    padding: 0.5em;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    top: 13.5em;
+    right: 35%;
+    font-size: 0.8em;
+    text-transform: capitalize;
+  }
+
+  h1 {
+    text-align: center;
+    padding: 1.5em 0em 1em 0em;
+    margin-top: 1.5em;
+  }
+  .form-container {
+    height: 3em;
+    width: 30em;
+    color: blue;
+    @include flexCenter();
+    margin: 1em auto 3em auto;
+    .input-element {
+      height: 2.5em;
+      width: 35vw;
+      border: none;
+      border-color: rgb(206, 201, 201);
+      border-radius: 10px 0px 0px 10px;
+      padding-left: 1.4em;
+      background: rgb(206, 201, 201);
+      color: white;
+      margin-left: 4em;
+      font-family: "Courier New", Courier, monospace;
+      letter-spacing: 0.14em;
+    }
+    .btn {
+      height: 2.5em;
+      width: 10em;
+      background: rgb(102, 145, 212);
+      color: black;
+      border: none;
+      border-radius: 0px 10px 10px 0px;
+      text-transform: capitalize;
+      transition: all linear 0.3s;
+      //   font-size: 0.85em;
+    }
+    .btn:hover {
+      cursor: pointer;
+      color: white;
+      background: rgb(40, 175, 216);
+    }
+  }
+  .hidden {
+    visibility: hidden;
+    opacity: 1;
+  }
+}
+.input-data {
+  @include flexCenter();
+  //   background: yellow;
+  height: 3em;
+  width: 28em;
+  margin: 1em 4em 1em 7em;
+  padding: 1em;
+  .input-data p {
+    margin-left: 4em;
+    margin-bottom: 4em;
+    padding: 3em;
+  }
+  .fa-solid {
+    font-size: 1.5em;
+    color: red;
+    transition: all linear 0.3s;
+  }
+  .fa-solid:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+  .fa-regular {
+    font-size: 1.5em;
+    color: green;
+    transition: all linear 0.3s;
+  }
+  .fa-regular:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+}
+.clear-btn {
+  // display: block;
+  color: red;
+  text-transform: capitalize;
+  font-family: "Courier New", Courier, monospace;
+  border: none;
+  height: 2em;
+  width: 10em;
+  border-radius: 10px;
+  margin: 1.5em auto 2em 16rem;
+  padding: 0.2em;
+  // position: absolute;
+
+  transition: all linear 0.3s;
+}
+.clear-btn:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  margin-bottom: 2em;
+}
+
+.show-container {
+  visibility: visible;
+}
+.alert-danger {
+  color: red;
+  background: rgb(250, 163, 163);
+}
+.alert-success {
+  color: green;
+  background: rgb(176, 214, 176);
+}
